@@ -12,6 +12,11 @@ Vue.createApp({
 
         }
     },
+    computed: {
+        getLastMail() {
+            return this.mails.slice(-1)[0]
+        }
+    },
     methods: {
         
         async helperGetAndShow(url) { // helper metode: getAllBooks + getByTitle are very similar
