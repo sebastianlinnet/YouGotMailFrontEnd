@@ -1,13 +1,42 @@
 body {
     background-color: rgb(216, 0, 0);
+    padding: 10px;
 }
-p {
+
+p, li, ul {
     color: #ffffff;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+a {
+    color: #ffffff;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 500;
 }
 
 h2 {
     color: #ffffff;
+    font-family: Roboto;
+    font-weight: 500;
 }
+
+h4 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    height: 50px;
+  }
 
 .btn {
     margin: 5px;
@@ -24,7 +53,7 @@ h2 {
 }
 
 .card-container{
-    position: relative;
+    /* position: relative; */
     height: 100%;
 }
 .card {

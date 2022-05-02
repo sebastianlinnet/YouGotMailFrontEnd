@@ -9,34 +9,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css" />
     <title>You Got Mail WebApp</title>
 </head>
 
 <body>
     <header>
-        <div class="headline">
-            <h2>You got mail!</h2>
-        </div>
+        <h1 style="text-align: center;">PostMaster3000</h1>
     </header>
-    <img src="imgs/mailbox2.png" style="width: 100%;">
     <div class="card-container">
         <div class="card">
-            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <img class="card-img-top" src="imgs/mailbox2.png" alt="mailbox">
             <div class="card-body">
-                <!-- <h2 class="card-title">You got mail!</h2> -->
-                <p class="card-text">pinefpin SOIFNWPIEF IODNFOI aosnfpisg.</p>
+                <h2 class="card-title" style="text-align: center;">Du har post!</h2>
+                <p class="card-text">Der blev sidst leveret post:</p>
+                <p> {{ latest.blabla }} </p>
                 <div class="button-container">
-                    <a href="#" class="btn btn-warning">Se seneste</a><a href="#" class="btn btn-warning">Se alle</a>
+                    <p><a href="#" class="btn btn-success">Post afhentet</a></p>
+                    <p><a href="all.html" class="btn btn-warning">Se alle notifikationer</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        <p>
-            bla bla 
-        </p>
-    </footer>
+    
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding-bottom: 5px;">
+          <p class="text-warning">PostNord &copy; PostMasters 2022<br>
+            <a href="privacy.html">Privatlivs politik</a></p>
+        </div>
+      </footer>
 </body>
 
 </html>
