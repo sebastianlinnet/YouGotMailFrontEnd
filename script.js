@@ -7,6 +7,7 @@ Vue.createApp({
     data() {
         return {
             mails: [],
+            mail: null,
             deleteMessage: "",
 
         }
@@ -24,6 +25,16 @@ Vue.createApp({
 
         getAllMail() {
             this.helperGetAndShow(baseUrl)
+        },
+
+        async getById(id) {
+            const url = baseUrl + "/" + id
+            try {
+                const response = await axios.get(url)
+                this.mail = await response.data
+            } catch (ex) {
+                alert(ex.message)
+            }
         },
 
         async deleteMail(deleteId) {
