@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(216, 0, 0);
+}
+p {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.headline {
+    text-align: center;
+    padding: 5vh;
+}
+
+.card-container{
+    position: relative;
+    height: 100%;
+}
+.card {
+    background-color: rgb(216, 0, 0);
+    
+}
