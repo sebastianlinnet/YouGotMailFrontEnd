@@ -1,6 +1,9 @@
-const baseUrl = ""
+const baseUrl = "https://jsonplaceholder.typicode.com/posts"
 
 Vue.createApp({
+    created(){
+        this.getAllMail()
+    },
     data() {
         return {
             mails: [],
