@@ -17,21 +17,18 @@
 <body>
     <p><a href="index.html" class="btn btn-warning">Tilbage</a></p>
     <h2>Alle Notifikationer</h2>
+    <button v-on:click="getAllMail" class="btn btn-dark" v-if="mails.length">Get all</button>
     <table class="table table-striped">
         <thead>
           <tr>
-            <th><h4>#</h4></th>
+            <th><h4>ID</h4></th>
             <th><h4>Tidspunkt</h4></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><p>1</p></td>
-            <td><p>Dato1</p></td>
-          </tr>
-          <tr>
-            <td><p>2</p></td>
-            <td><p>Dato2</p></td>
+          <tr v-for="mail in mails">
+            <td><p>{{mail.Id}}</p></td>
+            <td><p>{{mail.TimeStamp}}</p></td>
           </tr>
         </tbody>
       </table>
