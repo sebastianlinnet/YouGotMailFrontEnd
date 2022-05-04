@@ -29,15 +29,21 @@
           <th>
             <h4>Tidspunkt</h4>
           </th>
+          <th>
+            
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="mail in mails.reverse()">
+        <tr v-for="mail, index in mails">
           <td>
-            <p>{{mail.id}}</p>
-          </td>
+           <p> {{mail.id}}</p>
+        </td>
           <td>
             <p>{{mail.title}}</p>
+          </td>
+          <td>
+            <button class="btn btn-xs btn-success" @click="deleteOneMail(index)">Delete</button>
           </td>
         </tr>
       </tbody>

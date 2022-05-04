@@ -9,6 +9,7 @@ Vue.createApp({
             mails: [],
             mail: null,
             deleteMessage: "",
+            deleteId: 0,
         }
     },
     // computed: {
@@ -29,6 +30,10 @@ Vue.createApp({
 
         clearMail() {
             this.mails = []
+        },
+
+        deleteOneMail(index) {
+            this.mails.splice(index, 1);
         },
 
         getAllMail() {
