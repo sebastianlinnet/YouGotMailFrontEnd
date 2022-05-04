@@ -9,7 +9,6 @@ Vue.createApp({
             mails: [],
             mail: null,
             deleteMessage: "",
-
         }
     },
     computed: {
@@ -26,6 +25,10 @@ Vue.createApp({
             } catch (ex) {
                 alert(ex.message) // https://www.w3schools.com/js/js_popup.asp
             }
+        },
+
+        clearMail() {
+            this.mails = []
         },
 
         getAllMail() {

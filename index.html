@@ -26,29 +26,18 @@
                 <img class="card-img-top" src="imgs/mailbox2.png" alt="mailbox">
                 <div class="card-body">
 
-                    <!-- <input v-model="idToGetBy" placeholder="id" type="number" />
-                    <button v-on:click="getById(idToGetBy)" class="btn btn-primary">Get by id</button> -->
                     <div v-if="mails.length">
                         <div>
                             <h2 class="card-title" style="text-align: center;">Du har post!</h2>
                         </div>
-                        <p> {{ getLastMail }} </p>
+                        <p> {{ getLastMail.id }} - {{ getLastMail.title }}  </p>
                     </div>
                     <div v-else>
                         <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
                     </div>
 
-
-                    <!-- <div><h2 class="card-title" style="text-align: center;">Du har post!</h2></div>
-                    <input v-model="idToGetBy" placeholder="id" type="number" />
-                    <button v-on:click="getById(idToGetBy)" class="btn btn-primary">Get by id</button>
-                    <div v-if="mail">
-                           <p> {{ mail.id }} - {{ mail.title }} </p>
-                    </div>
-                    <div v-else><p>Ingen post</p></div> -->
-
                     <div class="button-container">
-                        <p><a href="#" class="btn btn-success">Post afhentet</a></p>
+                        <p><a href="#" class="btn btn-success" v-on:click="clearMail">Post afhentet</a></p>
                         <p><a href="all.html" class="btn btn-warning">Se alle notifikationer</a></p>
                     </div>
                 </div>
