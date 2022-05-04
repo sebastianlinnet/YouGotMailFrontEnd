@@ -41,7 +41,7 @@
                             <h2 class="card-title" style="text-align: center;">Du har post!</h2>
                             <p>Seneste leveringer:</p>
                         </div>
-                        <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ mail.title }}  </p>
+                        <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ mail.unixTimeStamp }}  </p>
                     </div>
                     <div v-else>
                         <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>

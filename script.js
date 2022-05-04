@@ -1,4 +1,4 @@
-const baseUrl = "https://jsonplaceholder.typicode.com/posts"
+const baseUrl = "https://yougotmailapi.azurewebsites.net/api/Mail"
 
 Vue.createApp({
     created(){
