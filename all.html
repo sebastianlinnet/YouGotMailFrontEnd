@@ -40,7 +40,7 @@
            <p> {{mail.id}}</p>
         </td>
           <td>
-            <p>{{mail.unixTimeStamp}}</p>
+            <p>{{ConvertUnix(mail.unixTimeStamp)}}</p>
           </td>
           <td>
             <button class="btn btn-warning" @click="deleteOneMail(index)">Slet</button>
