@@ -37,7 +37,7 @@
                     </div> -->
                     <div v-if="mails.length">
                         <div>
-                            <h4 class="card-title" style="text-align: center;">Du har post!</h4>
+                            <h4 class="card-title" style="text-align: center;">Du har post!  <a href="mail.html"> <img class="bell" src="imgs/bell noti.png" alt="Bell"></a> </h4>
                             <p>Seneste leveringer:</p>
                         </div>
                         <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ ConvertUnix(mail.unixTimeStamp) }} </p>
