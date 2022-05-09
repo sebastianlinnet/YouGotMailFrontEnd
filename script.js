@@ -33,7 +33,7 @@ Vue.createApp({
         },
 
         deleteOneMail(index) {
-            this.mails.splice(index, 1);
+            
         },
 
         getAllMail() {
@@ -51,7 +51,7 @@ Vue.createApp({
             var minutes = "0" + date.getMinutes();
 
             // Will display time in 10:30:23 format
-            var formattedTime = date.getDate() +'/' + date.getMonth() + '/' + date.getFullYear() + ':  kl: ' + hours + ':' + minutes.substr(-2) 
+            var formattedTime = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear() + ':  kl: ' + hours + ':' + minutes.substr(-2)
             console.log(formattedTime);
             return formattedTime;
         },

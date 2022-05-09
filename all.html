@@ -43,7 +43,7 @@
             <p>{{ConvertUnix(mail.unixTimeStamp)}}</p>
           </td>
           <td>
-            <button class="btn btn-warning" @click="deleteOneMail(index)">Slet</button>
+            <button class="btn btn-warning" v-on:click="deleteMail(mail.id)">Slet</button>
           </td>
         </tr>
       </tbody>
