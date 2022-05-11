@@ -34,9 +34,11 @@
                     <div v-else>
                         <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
                     </div> -->
+                    <a href="email.html" style="position:absolute; left: 14em;"> <img class="bell" src="imgs/bell noti.png" alt="Bell"></a>
+                    <br>
                     <div v-if="mails.length">
                         <div>
-                            <h4 class="card-title" style="text-align: center;">Du har post!  <a href="email.html"> <img class="bell" src="imgs/bell noti.png" alt="Bell"></a> </h4>
+                            <h4 class="card-title" style="text-align: center;">Du har post!</h4>
                             <p>Seneste leveringer:</p>
                         </div>
                         <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ ConvertUnix(mail.unixTimeStamp) }} </p>
