@@ -77,6 +77,12 @@ Vue.createApp({
             }
         },
 
+        async deleteAllMail(){
+            this.mails.forEach(element => {
+                this.deleteMail(element.id)
+            });
+        }
+
 
     }
 }).mount("#app")
