@@ -64,3 +64,9 @@ table, th, td, tr {
     border-bottom: 2px solid rgb(247, 251, 4);
     border-top: 0px;
   }
+
+.bell{
+    height: 30px;
+    width: auto;
+    margin-left: 5em;
+}
