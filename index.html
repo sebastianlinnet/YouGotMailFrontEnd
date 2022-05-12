@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>You Got Mail WebApp</title>
 </head>
 
@@ -34,12 +35,12 @@
                     <div v-else>
                         <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
                     </div> -->
-                    <a href="email.html" style="position:absolute; left: 14em;"> <img class="bell" src="imgs/bell noti.png" alt="Bell"></a>
+                    <a href="email.html"><i class="fa-solid fa-gears fa-2x" style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
                     <br>
                     <div v-if="mails.length">
                         <div>
                             <h4 class="card-title" style="text-align: center;">Du har post!</h4>
-                            <p>Seneste leveringer:</p>
+                            <p>Leveret:</p>
                         </div>
                         <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ ConvertUnix(mail.unixTimeStamp) }} </p>
                     </div>

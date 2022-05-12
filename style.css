@@ -61,7 +61,7 @@ h4 {
     
 }
 table, th, td, tr {
-    border-bottom: 2px solid rgb(247, 251, 4);
+    /* border-bottom: 2px solid rgb(247, 251, 4); */
     border-top: 0px;
   }
 
