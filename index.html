@@ -13,44 +13,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>You Got Mail WebApp</title>
 </head>
 
 <body>
     <div id="app">
-        <!-- <header style="margin-top: 30px; margin-bottom: 30px;">
-            <h1 style="text-align: center; color:yellow;">PostMaster3000</h1>
-        </header> -->
         <div class="card-container">
             <div class="card">
                 <div class="card-body">
-
-                    <!-- <div v-if="mails.length">
-                        <div>
-                            <h2 class="card-title" style="text-align: center;">Du har post!</h2>
-                        </div>
-                        <p> {{ getLastMail.id }} - {{ getLastMail.title }}  </p>
-                    </div>
-                    <div v-else>
-                        <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
-                    </div> -->
-                    <a href="email.html"><i class="fa-solid fa-gears fa-2x" style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
+                    <a href="email.html"><i class="fa-solid fa-gears fa-2x"
+                            style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
                     <br>
                     <div v-if="mails.length">
                         <template v-if="mails[0].detected==='yes'">
-                             
-                             <div>
-                                <h4 class="card-title" style="text-align: center;">Du har post!  <a href="mail.html"></a> </h4>
+
+                            <div>
+                                <h4 class="card-title" style="text-align: center;">Du har post!<a href="mail.html"></a>
+                                </h4>
                                 <p>Seneste levering:</p>
                                 <p>{{ mails[0].id }} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
-                            </div">
+                            </div>
                         </template>
-                        <div v-else>
-                            <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
-                        </div>
-                    </div>
 
+                    </div>
+                    <div v-else>
+                        <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
+                    </div>
                     <div class="button-container">
                         <p><button class="btn btn-success" v-on:click="clearMail">Post afhentet</button></p>
                         <p><a href="all.html" class="btn btn-warning">Se alle leveringer</a></p>

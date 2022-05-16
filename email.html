@@ -39,7 +39,10 @@
             <thead>
               <tr>
                 <th>
-                  <h4>Email</h4>
+                  <p>Email</p>
+                </th>
+                <th>
+                  <p>Slet</p>
                 </th>
               </tr>
             </thead>
@@ -48,7 +51,7 @@
               <tr v-for="email in emails">
                 <td>
                  <p> {{email.toEmails}}</p>
-              </td>
+                </td>
                 <td>
                   <button class="btn btn-warning" v-on:click="deleteEmail(email.id)">Slet</button>
                 </td>
