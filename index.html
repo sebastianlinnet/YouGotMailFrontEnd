@@ -38,14 +38,17 @@
                     <a href="email.html"><i class="fa-solid fa-gears fa-2x" style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
                     <br>
                     <div v-if="mails.length">
-                        <div>
-                            <h4 class="card-title" style="text-align: center;">Du har post!</h4>
-                            <p>Leveret:</p>
+                        <template v-if="mails[0].detected==='yes'">
+                             
+                             <div>
+                                <h4 class="card-title" style="text-align: center;">Du har post!  <a href="mail.html"></a> </h4>
+                                <p>Seneste levering:</p>
+                                <p>{{ mails[0].id }} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
+                            </div">
+                        </template>
+                        <div v-else>
+                            <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
                         </div>
-                        <p v-for="mail in mails.slice(0,5)"> {{ mail.id }} - {{ ConvertUnix(mail.unixTimeStamp) }} </p>
-                    </div>
-                    <div v-else>
-                        <h2 class="card-title" style="text-align: center;">Du har ingen post</h2>
                     </div>
 
                     <div class="button-container">
