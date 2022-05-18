@@ -29,16 +29,16 @@ Vue.createApp({
             }
         },
 
-        async clearMail() {
-            //this.mails = []
-            try {
-                response = await axios.post(baseUrl, this.addData)
-                //this.addMessage = "response " + response.status + " " + response.statusText
-                this.getAllMail()
-            } catch (ex) {
-                alert(ex.message)
-            }
-        },
+        // async clearMail() {
+        //     //this.mails = []
+        //     try {
+        //         response = await axios.post(baseUrl, this.addData)
+        //         //this.addMessage = "response " + response.status + " " + response.statusText
+        //         this.getAllMail()
+        //     } catch (ex) {
+        //         alert(ex.message)
+        //     }
+        // },
 
         deleteOneMail(index) {
             

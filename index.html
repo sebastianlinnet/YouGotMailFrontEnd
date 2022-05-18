@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15" />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
@@ -29,22 +30,22 @@
                     <img class="card-img-top" src="imgs/logo.png" alt="mailbox">
                     <div v-if="mails.length">
                         <template v-if="mails[0].detected==='yes'">
-
                             <div>
                                 <h4 class="card-title" style="text-align: center;">Du har post!<a href="mail.html"></a>
                                 </h4>
                                 <p>Seneste levering:</p>
                                 <p>{{ mails[0].id }} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
                             </div>
+                            <!-- <button class="btn btn-success" v-on:click="clearMail" style="width: 100%;">Afhent post</button> -->
                         </template>
                         <div v-else>
-                            <p class="card-title" style="text-align: center;">Du har ingen post!</p>
+                            <p class="card-title" style="text-align: center;">Du har ingen post</p>
                         </div>
                     </div>
 
                     <div class="button-container">
-                        <p><button class="btn btn-success" v-on:click="clearMail">Post afhentet</button></p><br>
-                        <p><a href="all.html" class="btn btn-warning">Se alle leveringer</a></p>
+                        <p>
+                        <a href="all.html" class="btn btn-warning" style="width: 100%;">Se alle leveringer</a></p>
                     </div>
                     <!-- <img class="card-img-top" src="imgs/logo.png" alt="mailbox"> -->
                 </div>
