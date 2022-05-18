@@ -10,6 +10,7 @@ Vue.createApp({
             mail: null,
             deleteMessage: "",
             deleteId: 0,
+            addData: {id: 0, unixTimeStamp: 1651649384, detected: "no" }
         }
     },
     // computed: {
@@ -28,8 +29,15 @@ Vue.createApp({
             }
         },
 
-        clearMail() {
-            this.mails = []
+        async clearMail() {
+            //this.mails = []
+            try {
+                response = await axios.post(baseUrl, this.addData)
+                //this.addMessage = "response " + response.status + " " + response.statusText
+                this.getAllMail()
+            } catch (ex) {
+                alert(ex.message)
+            }
         },
 
         deleteOneMail(index) {

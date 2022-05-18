@@ -25,8 +25,8 @@
             <div class="card" style="border-color: white;">
                 <div class="card-body">
                     <a href="email.html"><i class="fa-solid fa-gears fa-2x"
-                                style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
-                                <img class="card-img-top" src="imgs/logo.png" alt="mailbox">
+                            style="position: absolute; right: 0px; padding-right: 1rem;"></i></a>
+                    <img class="card-img-top" src="imgs/logo.png" alt="mailbox">
                     <div v-if="mails.length">
                         <template v-if="mails[0].detected==='yes'">
 
@@ -37,13 +37,13 @@
                                 <p>{{ mails[0].id }} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
                             </div>
                         </template>
+                        <div v-else>
+                            <p class="card-title" style="text-align: center;">Du har ingen post!</p>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div v-else>
-                        <p class="card-title" style="text-align: center;">Du har ingen post!</p>
-                    </div>
                     <div class="button-container">
-                        <p><button class="btn btn-success" v-on:click="clearMail">Post afhentet</button></p>
+                        <p><button class="btn btn-success" v-on:click="clearMail">Post afhentet</button></p><br>
                         <p><a href="all.html" class="btn btn-warning">Se alle leveringer</a></p>
                     </div>
                     <!-- <img class="card-img-top" src="imgs/logo.png" alt="mailbox"> -->
