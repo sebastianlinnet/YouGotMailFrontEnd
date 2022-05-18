@@ -34,7 +34,7 @@
                                 <h4 class="card-title" style="text-align: center;">Du har post!<a href="mail.html"></a>
                                 </h4>
                                 <p>Seneste levering:</p>
-                                <p>{{ mails[0].id }} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
+                                <p>{{mails[0].message}} - {{ ConvertUnix(mails[0].unixTimeStamp) }}</p>
                             </div>
                             <!-- <button class="btn btn-success" v-on:click="clearMail" style="width: 100%;">Afhent post</button> -->
                         </template>
