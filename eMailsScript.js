@@ -31,18 +31,16 @@ Vue.createApp({
         },
 
         async addEmail() {
-            try {
+            
                 response = await axios.post(baseUrl, this.addData)
-                this.addMessage = "response " + response.status + " " + response.statusText
+                //this.addMessage = "response " + response.status + " " + response.statusText
                 this.getAllEmail()
-            } catch (ex) {
-                alert(ex.message)
-            }
         },
 
 
         async deleteEmail(deleteId) {
             const url = baseUrl + "/" + deleteId
+
             try {
                 response = await axios.delete(url)
                 this.deleteMessage = response.status + " " + response.statusText
@@ -50,6 +48,7 @@ Vue.createApp({
             } catch (ex) {
                 alert(ex.message)
             }
+            
         }
     },
 }).mount("#email")
