@@ -1,4 +1,4 @@
-const baseUrl = "https://yougotmailapi.azurewebsites.net/api/Mail"
+const baseUrl = "https://yougotmailv2.azurewebsites.net/api/Mail"
 
 Vue.createApp({
     created() {
